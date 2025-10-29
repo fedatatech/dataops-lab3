@@ -62,6 +62,6 @@ Resources:
           rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
           yum upgrade -y
           amazon-linux-extras install java-openjdk11 -y
-          sudo yum install jenkins -y
-          sudo systemctl enable jenkins
+          sudo amazon-linux-extras enable corretto17
+          sudo yum install java-17-amazon-corretto -y
           sudo systemctl start jenkins
